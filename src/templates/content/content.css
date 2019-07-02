@@ -89,7 +89,13 @@
 			border-bottom: 1rem solid var(--box-dark);
 			transform: translateX(-50%);
 		}
+		
+		.player {
+			volume: 50;
+		}
 	}
+
+	
 }
 
 .jasp {
@@ -610,4 +616,8 @@ animation-fill-mode: forwards;
 		left: 110%;
 		transform: scaleX(1);
 	}
+}
+
+.player {
+	display: none;
 }

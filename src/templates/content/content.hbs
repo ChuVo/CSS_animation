@@ -31,4 +31,18 @@
   </label>	
 </label>
 
+<script>
+
+  let box = document.querySelector('.box');
+  box.addEventListener('click', () => {
+    const ear = document.querySelector('.mouse-ear');
+
+    if (ear.innerHTML !== '') {
+      ear.innerHTML='';
+    } else {
+      ear.innerHTML = '<audio class="player" autoplay="autoplay" loop="loop" controls preload="auto"><source src="media/music.ogg" type="audio/ogg; codecs=vorbis"><source src="media/mrr.mp3" type="audio/mpeg"></audio>';
+    }
+  });
+</script>
+
 
