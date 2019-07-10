@@ -4,40 +4,58 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles/index.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300">
   <title>CSS animation</title>
 </head>
 <body>
-  <div class="content">
-
-      <input type="chekbox" id="check" class="checkboxer">
-      <label for="check" class="container">
-        <div class="box-wiggle">
-          <div class="box">
-            <div class="box__flap box__flap_left"></div>
-            <div class="box__flap box__flap_right"></div>
-            <div class="box__arrow"></div>
-          </div>
-          <div class="cat">
-            <div class="cat__ear cat__ear_left"></div>
-            <div class="cat__ear cat__ear_right"></div>
-            <div class="cat__head">
-              <div class="cat__head-lower"></div>
-            </div>
-            <div class="cat__face">
-              <div class="cat__face-eye cat__face-eye_left"></div>
-              <div class="cat__face-eye cat__face-eye_right"></div>
-              <div class="cat__face-snoot"></div>
-              <div class="cat__wisker cat__wisker_left"></div>
-              <div class="cat__wisker cat__wisker_right"></div>
-            </div>
-            <div class="cat__body"></div>
-          </div>
-        </div>
-        <div class="mouse">
-          <div class="mouse-ear"></div>
-        </div>
-      </label>
-
-  </div>  
+  <input type="checkbox" id="check" class="checkboxer">
+  <label class="container" for="check">
+  	<div class="box-wiggle">
+  		<div class="box">
+        <span class="box-text">Поздравляю!</span>
+  			<div class="box-flap box-flap-left"></div>
+  			<div class="box-flap box-flap-right"></div>
+  			<div class="box-arrow"></div>
+  		</div>
+  		<div class="jasp">
+  			<div class="jasp-ear jasp-ear-left"></div>
+  			<div class="jasp-ear jasp-ear-right"></div>
+  			<div class="jasp-head">
+  				<div class="jasp-head-lower"></div>
+  			</div>
+  			<div class="jasp-face">
+  				<div class="jasp-eye jasp-eye-left"></div>
+  				<div class="jasp-eye jasp-eye-right"></div>
+  				<div class="jasp-snoot"></div>
+  				<div class="jasp-whisker jasp-whisker-left"></div>
+  				<div class="jasp-whisker jasp-whisker-right"></div>
+  			</div>
+  			<div class="jasp-body"></div>
+  		</div>
+  	</div>  
+    <input type="checkbox" id="mouse" class="checkmouser">
+    <label class="mouser" for="mouse">
+      <div class="mouse">
+        <div class="mouse-ear"></div>
+      </div>
+    </label>	
+  </label>
+  
+  <script>
+  
+    let box = document.querySelector('.box');
+    box.addEventListener('click', () => {
+      const ear = document.querySelector('.mouse-ear');
+  
+      if (ear.innerHTML !== '') {
+        ear.innerHTML='';
+      } else {
+        ear.innerHTML = '<audio class="player" autoplay="autoplay" loop="loop" controls preload="auto"><source src="media/music.ogg" type="audio/ogg; codecs=vorbis"><source src="media/mrr.mp3" type="audio/mpeg"></audio>';
+      }
+    });
+  </script>
+  
+  
 </body>
 </html>
